@@ -57,4 +57,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+#shop-container {
+    display: none;
+}
 </style>

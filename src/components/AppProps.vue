@@ -17,7 +17,9 @@ export default {
 
 <template>
     <div class="card">
-        <img :src="img" alt="">
+        <div class="img-wrapper">
+            <img :src="img" alt="">
+        </div>
         <div class="card-title">{{ serie }}</div>
     </div>
 </template>
@@ -25,17 +27,22 @@ export default {
 <style lang="scss" scoped>
 .card {
     display: flex;
-    flex-direction: column-reverse;
-    width: 200px;
-    height: 250px;
-    border: 1px solid red;
+    flex-direction: column;
+
+    .img-wrapper {
+        width: 200px;
+        height: 250px;
+    }
 
     .card-title {
+        width: 200px;
         padding-top: 20px;
+        word-wrap: break-word;
     }
 
     img {
         width: 100%;
+        height: 100%;
     }
 }
 </style>
