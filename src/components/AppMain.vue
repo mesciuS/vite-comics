@@ -88,26 +88,73 @@ export default {
 
 <template>
     <div id="main">
+        <div id="jumbotron">
+            <img src="/img/jumbotron.jpg" alt="">
+            <div class="current-series">current series</div>
+        </div>
         <div id="card-container">
             <AppProps v-for="comic in comics" :img="comic.thumb" :serie="comic.series"></AppProps>
+        </div>
+        <div id="btn-container">
+            <button>LOAD MORE</button>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 #main {
-    height: 600px;
-    padding-top: 20px;
+    height: 1000px;
     padding-bottom: 20px;
-    padding-left: 300px;
-    padding-right: 300px;
-
+    
+    #jumbotron {
+        position: relative;
+        height: 300px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            text-align: center;
+        }
+        .current-series {
+            position: absolute;
+            left: 330px;
+            top: 280px;
+            width: 220px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            font-weight: bold;
+            background-color: #0282f9;
+        }
+    }
+    
     #card-container {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 300px;
+        padding-right: 300px;
+        
         gap: 30px;
     }
+
+    #btn-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+
+        button {
+            width: 150px;
+            height: 30px;
+            border: none;
+            background-color: #0282f9;
+
+        }
+    }
+
 }
 </style>
