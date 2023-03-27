@@ -89,7 +89,6 @@ export default {
 <template>
     <div id="main">
         <div id="jumbotron">
-            <img src="/img/jumbotron.jpg" alt="">
             <div class="current-series">current series</div>
         </div>
         <div id="card-container">
@@ -109,12 +108,10 @@ export default {
     #jumbotron {
         position: relative;
         height: 300px;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            text-align: center;
-        }
+        background: url("/img/jumbotron.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
         .current-series {
             position: absolute;
             left: 330px;
